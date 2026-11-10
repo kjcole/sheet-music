@@ -43,7 +43,7 @@
   % instrument  = \markup { \smallCaps { "Soprano" } }
 }
 
-pageBreaking = #(string-append (getenv "HOME") "/.local/lib/lilypond/" (if (getenv "PAGE_BREAKING") (getenv "PAGE_BREAKING") "svg") ".ily")
+pageBreaking = #(string-append (if (getenv "PAGE_BREAKING") (getenv "PAGE_BREAKING") "svg") ".ily")
 \include \pageBreaking
 
 global = {

@@ -9,12 +9,12 @@
 
 \include "predefined-guitar-fretboards.ly"
 \include "articulate.ly"
-\include "/home/kjcole/.local/lib/lilypond/larsen-symbols.ily"
+\include "larsen-symbols.ily"
 
 % Use environment variable to decide if discrete pagination (PDF) or
 % continuous pagination (SVG). Default to SVG if none defined.
 %
-pageBreaking = #(string-append (getenv "HOME") "/.local/lib/lilypond/" (if (getenv "PAGE_BREAKING") (getenv "PAGE_BREAKING") "svg") ".ily")
+pageBreaking = #(string-append (if (getenv "PAGE_BREAKING") (getenv "PAGE_BREAKING") "svg") ".ily")
 \include \pageBreaking
 
 % Asking Perplexity AI about sustaining chords a bit...
